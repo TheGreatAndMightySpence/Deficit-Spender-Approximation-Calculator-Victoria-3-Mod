@@ -1,0 +1,316 @@
+{
+  "Subsistence Farms": {
+    "Base": [
+      {"name": "Basic Production", "outputs": {"Grain": 1, "Fabric": 0.5}, "inputs": {}}
+    ],
+    "Home Workshops": [
+      {"name": "No Home Workshops", "outputs": {"Grain": 0.5, "Fabric":0.25, "Wood":0.25}, "inputs": {}},
+      {"name": "Home Workshops", "outputs": {"Clothes": 0.25, "Furniture":0.25, "Liquor":0.25}, "inputs": {}}
+    ]
+  },
+  "Food Industries": {
+
+    "Base" : [
+    {"name":"Bakeries", "outputs": {"Groceries":45},"inputs":{"Grain":40}},
+    {"name":"Sweeteners","outputs":{"Groceries":65},"inputs":{"Grain":40,"Sugar":15}},
+    {"name":"Baking Powder","outputs":{"Groceries":120},"inputs":{"Grain":80,"Sugar":30}}
+  ],
+  "Canning": [
+    {"name": "Jars", "outputs":{}, "inputs":{}},
+    {"name": "Canned Meat", "outputs": {"Groceries":30},"inputs":{"Meat":20,"Iron":10,"Grain":-20}},
+    {"name": "Canned Fish", "outputs": {"Groceries":30}, "inputs":{"Fish":30,"Iron":10,"Grain":-20}},
+    {"name": "Vacuum Packaging", "outputs": {"Groceries": 60}, "inputs":{"Fish":30,"Meat":20,"Iron":10,"Oil": 5, "Grain":-30}},
+    {"name": "Efficient Canning Practices", "outputs": {"Groceries": 70}, "inputs":{"Fish":30,"Meat":20,"Iron":10,"Oil": 5, "Grain":-30}}
+  ],
+  "Distilleries":[
+    {"name": "Prioritize Grocery Production", "outputs":{},"inputs":{}},
+    {"name": "Pot Stills", "outputs":{"Liquor":60,"Groceries":-30},"inputs":{"Sugar":25}},
+    {"name": "Patent Stills", "outputs":{"Liquor":100,"Groceries":-40},"inputs":{"Sugar":25,"Glass":10}}
+  ],
+  "Automation": [
+    {"name":"Manual Dough Processing","outputs":{},"inputs":{}},
+    {"name":"Automated Bakery", "outputs":{},"inputs":{"Tools":10}}
+  ]
+  },
+  "Textile Mills": {
+    "Base":[
+      {"name":"Handsewn Clothes","outputs":{"Clothes":45},"inputs":{"Fabric":40}},
+      {"name":"Dye Workshops","outputs":{"Clothes":60},"inputs":{"Fabric":40,"Dye":5}},
+      {"name":"Sewing Machines","outputs":{"Clothes":100},"inputs":{"Fabric":60,"Dye":10,"Tools":-5}},
+      {"name":"Electric Sewing Machines","outputs":{"Clothes":100},"inputs":{"Fabric":60,"Dye":20,"Tools":10,"Electricity":10}}
+    ],
+    "Luxury Production":[
+      {"name":"Prioritize Non-Luxury Clothing","outputs":{},"inputs":{}},
+      {"name":"Craftsman Sewing","outputs":{"Clothes":-30,"Luxury clothes":30},"inputs":{"Silk":15,"Fabric":-15}},
+      {"name":"Elastics","outputs":{"Clothes":-70,"Luxury clothes":70},"inputs":{"Silk":35,"Fabric":-35,"Rubber":10}}
+      
+    ],
+    "Automation":[
+      {"name":"Traditional Looms","outputs":{},"inputs":{}},
+      {"name":"Mechanized Looms","outputs":{},"inputs":{"Tools":5}},
+      {"name":"Automatic Power Looms","outputs":{},"inputs":{"Tools":5,"Electricity":10}}
+    ]
+  },
+  "Furniture Manufacturies":{
+    "Base":[
+      {"name":"Handcrafted Furniture","outputs":{"Furniture":45},"inputs":{"Wood":30,"Fabric":10}},
+      {"name":"Lathes","outputs":{"Furniture":65},"inputs":{"Wood":30,"Fabric":10,"Tools":5}},
+      {"name":"Mechanized Workshops","outputs":{"Furniture":110},"inputs":{"Wood":50,"Fabric":10,"Tools":10}}
+    ],
+    "Luxury Production":
+    [ {"name":"Prioritize Non-Luxury Furniture","outputs":{},"inputs":{}},
+      {"name":"Luxury Furniture Production","outputs":{"Furniture":-25,"Luxury furniture":25},"inputs":{"Hardwood":15,"Wood":-15}},
+      {"name":"Precision Tools","outputs":{"Furniture":-55,"Luxury furniture":55},"inputs":{"Hardwood":25,"Wood":-25,"Tools":-10}}
+  ],
+  "Automation":[
+   {"name":"Hand Assembly","outputs":{},"inputs":{}},
+   {"name":"Water-tube Boiler","outputs":{},"inputs":{"Tools":5,"Coal":5}},
+   {"name":"Rotary Valve Engine","outputs":{},"inputs":{"Tools":5,"Coal":10}},
+   {"name":"Assembly Lines","outputs":{},"inputs":{"Tools":5,"Electricity":5,"Oil":5}}
+  ]
+  },
+  "Glassworks" :{
+    "Base" : [{"name":"Forest Glass","outputs": {"Glass":30},"inputs":{"Wood":30}},
+              {"name":"Leaded Glass","outputs": {"Glass":40},"inputs":{"Wood":20,"Lead":10}},
+              {"name":"Crystal Glass","outputs": {"Glass":60},"inputs":{"Lead":35}},
+              {"name":"Houseware Plastics","outputs": {"Glass":100},"inputs":{"Lead":30,"Oil":20}}
+            ],
+  "Luxury Production": [
+    {"name":"Prioritize Glass Production","outputs":{},"inputs":{}},
+    {"name":"Ceramics","outputs":{"Glass":-10,"Porcelain":10},"inputs":{"Dye":5}},
+    {"name":"Bone China","outputs":{"Glass":-20,"Porcelain":30},"inputs":{"Dye":10}}
+  ],
+  "Glassblowing": [
+    {"name":"Manual Glassblowing","outputs":{},"inputs":{}},
+    {"name":"Automatic Bottle Blowers","outputs":{},"inputs":{"Tools":2,"Engines":2,"Oil":5}}
+  ]
+  },
+  "Tooling Workshops": {
+    "Base":[
+      {"name":"Crude Tools","outputs":{"Tools":30},"inputs":{"Wood":30}},
+      {"name":"Pig Iron Tools","outputs":{"Tools":60},"inputs":{"Wood":30,"Iron":20}},
+      {"name":"Steel Tools","outputs":{"Tools":80},"inputs":{"Wood":30,"Steel":20}},
+      {"name":"Machined Steel Tools","outputs":{"Tools":110},"inputs":{"Rubber":10,"Steel":30}}
+  ],
+  "Automation":[
+    {"name":"Hand Assembly","outputs":{},"inputs":{}},
+    {"name":"Water-tube Boiler","outputs":{},"inputs":{"Coal":10}},
+    {"name":"Rotary Valve Engine","outputs":{},"inputs":{"Coal":15}},
+    {"name":"Assembly Lines","outputs":{},"inputs":{"Electricity":5,"Oil":10}}
+  ]
+  },
+  "Paper Mills":{
+    "Base" : [
+      {"name":"Pulp Pressing", "outputs":{"Paper":40},"inputs":{"Wood":30}},
+      {"name":"Sulfite Pulping", "outputs":{"Paper":70},"inputs":{"Wood":30,"Sulfur":10}},
+      {"name":"Paper Bleaching", "outputs":{"Paper":100},"inputs":{"Wood":30,"Sulfur":10,"Dye":10}}
+    ],
+    "Automation":[
+      {"name":"Hand Assembly", "outputs":{},"inputs":{}},
+      {"name":"Water-tube Boiler", "outputs":{},"inputs":{"Tools":5,"Coal":5}},
+      {"name":"Rotary Valve Engine", "outputs":{},"inputs":{"Tools":5,"Coal":10}}
+    ]
+  },
+  "Fertilizer Plants": {
+    "Fertilizer Production": [
+      {"name":"Artificial Fertilizers","outputs":{"Fertilizer":90},"inputs":{"Sulfur":30,"Iron":10}},
+      {"name":"Improved Fertilizers","outputs":{"Fertilizer":140},"inputs":{"Sulfur":30,"Iron":30}},
+      {"name":"Nitrogen Fixation Process","outputs":{"Fertilizer":200},"inputs":{"Sulfur":40,"Iron":30,"Oil":20}}
+    ]
+  },
+  "Synthetics Plants" : {
+    "Synthetic Dyes" : [
+      {"name":"Synthetic Dye","outputs":{"Dye":80},"inputs":{"Sulfur":20,"Fertilizer":30}}
+    ],
+    "Synthetic Silk" : [
+      {"name":"Prioritize Dye Production","outputs":{},"inputs":{}},
+      {"name":"Rayon","outputs":{"Dye":-10,"Silk":30},"inputs":{"Wood":10}}
+    ]
+  },
+  
+  "Steel Mills": {
+    "Steelmaking Process": [
+      {"name":"Blister Steel Process","outputs":{"Steel":65},"inputs":{"Iron":40,"Coal":30}},
+      {"name":"Bessemer Process","outputs":{"Steel":90},"inputs":{"Iron":60,"Coal":30}},
+      {"name":"Open Hearth Process","outputs":{"Steel":120},"inputs":{"Iron":90,"Coal":30}},
+      {"name":"Electric Arc Process","outputs":{"Steel":150},"inputs":{"Iron":100,"Coal":30,"Electricity":30}}
+    ],
+    "Automation": [
+      {"name":"Hand Assembly","outputs":{},"inputs":{}},
+      {"name":"Water-tube Boiler","outputs":{},"inputs":{"Tools":5,"Coal":5}},
+      {"name":"Rotary Valve Engine","outputs":{},"inputs":{"Tools":5,"Coal":10}}
+    ]
+  },
+  "Motor Industries": {
+    "Base" : [
+      {"name":"Steam Engines", "outputs":{"Engines":40},"inputs":{"Steel":30}},
+      {"name":"Electric Engines", "outputs":{"Engines":80},"inputs":{"Steel":40,"Electricity":30}},
+      {"name":"Diesel Engines", "outputs":{"Engines":120},"inputs":{"Steel":50,"Oil":50}}
+    ],
+    "Automation" : [
+      {"name":"Hand Assembly","outputs":{},"inputs":{}},
+      {"name":"Water-tube Boiler","outputs":{},"inputs":{"Tools":5,"Coal":5}},
+      {"name":"Rotary Valve Engine","outputs":{},"inputs":{"Tools":5,"Coal":10}},
+      {"name":"Assembly Lines","outputs":{},"inputs":{"Tools":5,"Oil":5,"Electricity":5}}
+    ]
+  },
+  "Shipyards" : {
+    "Base":[
+      {"name":"Wooden Ships","outputs":{"Clippers":35},"inputs":{"Wood":40,"Fabric":20}},
+      {"name":"Reinforced Wooden Ships","outputs":{"Clippers":70},"inputs":{"Wood":20,"Fabric":20,"Hardwood":20,"Engines":5}},
+      {"name":"Steamships","outputs":{"Steamers":65},"inputs":{"Steel":30,"Coal":10,"Engines":10}},
+      {"name":"Arc-Welded Steamships","outputs":{"Steamers":80},"inputs":{"Steel":30,"Electricity":30,"Engines":10}}
+    ]
+  },
+  "Military Shipyards":{
+    "Base":[
+      {"name":"Wooden Hulls","outputs":{"Man-o-Wars":35},"inputs":{"Wood":40,"Hardwood":20,"Fabric":20,"Iron":10}},
+      {"name":"Steam Ships","outputs":{"Man-o-Wars":45},"inputs":{"Wood":20,"Hardwood":20,"Fabric":10,"Engines":10,"Iron":10}},
+      {"name":"Steel Hulls","outputs":{"Iornclads":55},"inputs":{"Steel":40,"Coal":20,"Engines":10}},
+      {"name":"Capital Ships","outputs":{"Iornclads":70},"inputs":{"Steel":40,"Electricity":30,"Engines":20}}
+    ]
+  },
+  "Explosives Factory": {
+    "Explosives": [
+      {"name": "Leblanc Process", "outputs": {"Explosives": 50}, "inputs": {"Sulfur": 20, "Fertilizer": 20}},
+      {"name": "Ammonia-soda Process", "outputs": {"Explosives": 80}, "inputs": {"Sulfur": 30, "Fertilizer": 30}},
+      {"name": "Vacuum Evaporation", "outputs": {"Explosives": 110}, "inputs": {"Fertilizer": 40, "Sulfur": 40,"Paper":20}},
+      {"name": "Brine Electrolysis", "outputs": {"Explosives": 150}, "inputs": {"Fertilizer": 50, "Sulfur": 40,"Paper":30,"Electricity":20}}
+    ]
+  },
+  "Electrics Industries": {
+    "Telephones": [
+      {"name": "Telephone Production", "outputs": {"Telephones": 60}, "inputs": {"Lead": 20, "Iron": 20,"Rubber":20,"Tools":10}}
+    ],
+    "Radios" : [
+      {"name":"Prioritize Telephone Production","outputs":{},"inputs":{}},
+      {"name":"Radio Production","outputs":{"Radios":40,"Telephones":-20},"inputs":{}}
+    ]
+  },
+  "Automotive Industries" : {
+    "Automobiles":[
+      {"name":"Automobile Production","outputs":{"Automobiles":30},"inputs":{"Engines":10,"Rubber":5,"Oil":5}},
+      {"name":"Mass Production","outputs":{"Automobiles":50},"inputs":{"Engines":10,"Rubber":10,"Oil":10}}
+    ],
+    "Aeroplanes":[
+      {"name":"No Aeroplane Production","outputs":{},"inputs":{}},
+      {"name":"Aeroplane Production","outputs":{"Areoplanes":10,"Automobiles":-10},"inputs":{"Hardwood":4,"Fabric":4}}
+    ],
+    "Tanks":[
+      {"name":"No Tank Production","outputs":{},"inputs":{}},
+      {"name":"Tank Production","outputs":{"Tanks":20,"Automobiles":-20},"inputs":{"Steel":5}}
+    ],
+    "Automation":[
+      {"name":"Hand Assembly","outputs":{},"inputs":{}},
+      {"name":"Assembly Lines","outputs":{},"inputs":{"Tools":5,"Oil":5,"Electricity":5}}
+    ]
+  },
+
+  "Rye Farms":{
+    "Base":[
+      {"name":"Simple Farming","outputs":{"Grain":20},"inputs":{}},
+      {"name":"Soil-Enriching Farming","outputs":{"Grain":30},"inputs":{"Fertilizer":5}},
+      {"name":"Fertilizers","outputs":{"Grain":45},"inputs":{"Fertilizer":10}},
+      {"name":"Chemical Fertilizers","outputs":{"Grain":60},"inputs":{"Fertilizer":15}}
+    ],
+    "Secondary" :[
+      {"name":"Maintain Single Crop","outputs":{},"inputs":{}},
+      {"name":"Potatoes","outputs":{"Grain":-10,"Liquor":10},"inputs":{}},
+      {"name":"Apple Orchards","outputs":{"Grain":-8,"Fruit":7,"Sugar":1},"inputs":{}},
+      {"name":"Sugar Beets","outputs":{"Grain":-5,"Sugar":4},"inputs":{}}
+    ],
+    "Harvesting Process":[
+      {"name":"Ox-Powered Ploughs","outputs":{},"inputs":{}},
+      {"name":"Harvesting Tools","outputs":{},"inputs":{"Tools":2}},
+      {"name":"Steam-Powered Thresher Machines","outputs":{},"inputs":{"Tools":2,"Coal":1}},
+      {"name":"Tractors","outputs":{},"inputs":{"Coal":2,"Engines":1}},
+      {"name":"Compression Ignition Tractors","outputs":{},"inputs":{"Oil":2,"Engines":1}}
+    ]
+  },
+
+    "Wheat Farms":{
+    "Base":[
+      {"name":"Simple Farming","outputs":{"Grain":20},"inputs":{}},
+      {"name":"Soil-Enriching Farming","outputs":{"Grain":30},"inputs":{"Fertilizer":5}},
+      {"name":"Fertilizers","outputs":{"Grain":45},"inputs":{"Fertilizer":10}},
+      {"name":"Chemical Fertilizers","outputs":{"Grain":60},"inputs":{"Fertilizer":15}}
+    ],
+    "Secondary" :[
+      {"name":"Maintain Single Crop","outputs":{},"inputs":{}},
+      {"name":"Citrus Orchards","outputs":{"Grain":-8,"Fruit":7,"Sugar":1},"inputs":{}},
+      {"name":"Sugar Beets","outputs":{"Grain":-5,"Sugar":4},"inputs":{}}
+    ],
+    "Harvesting Process":[
+      {"name":"Ox-Powered Ploughs","outputs":{},"inputs":{}},
+      {"name":"Harvesting Tools","outputs":{},"inputs":{"Tools":2}},
+      {"name":"Steam-Powered Thresher Machines","outputs":{},"inputs":{"Tools":2,"Coal":1}},
+      {"name":"Tractors","outputs":{},"inputs":{"Coal":2,"Engines":1}},
+      {"name":"Compression Ignition Tractors","outputs":{},"inputs":{"Oil":2,"Engines":1}}
+    ]
+  },
+
+    "Rice Farms":{
+    "Base":[
+      {"name":"Simple Farming","outputs":{"Grain":20},"inputs":{}},
+      {"name":"Soil-Enriching Farming","outputs":{"Grain":30},"inputs":{"Fertilizer":5}},
+      {"name":"Fertilizers","outputs":{"Grain":45},"inputs":{"Fertilizer":10}},
+      {"name":"Chemical Fertilizers","outputs":{"Grain":60},"inputs":{"Fertilizer":15}}
+    ],
+    "Secondary" :[
+      {"name":"Maintain Single Crop","outputs":{},"inputs":{}},
+      {"name":"Fig Orchards","outputs":{"Grain":-20,"Fruit":15,"Sugar":2},"inputs":{}}
+    ],
+    "Harvesting Process":[
+      {"name":"Ox-Powered Ploughs","outputs":{},"inputs":{}},
+      {"name":"Harvesting Tools","outputs":{},"inputs":{"Tools":4}},
+      {"name":"Steam-Powered Thresher Machines","outputs":{},"inputs":{"Tools":4,"Coal":2}}
+    ]
+  },
+    "Maize Farms":{
+    "Base":[
+      {"name":"Simple Farming","outputs":{"Grain":20},"inputs":{}},
+      {"name":"Soil-Enriching Farming","outputs":{"Grain":30},"inputs":{"Fertilizer":5}},
+      {"name":"Fertilizers","outputs":{"Grain":45},"inputs":{"Fertilizer":10}},
+      {"name":"Chemical Fertilizers","outputs":{"Grain":60},"inputs":{"Fertilizer":15}}
+    ],
+    "Secondary" :[
+      {"name":"Maintain Single Crop","outputs":{},"inputs":{}},
+      {"name":"Citrus Orchards","outputs":{"Grain":-8,"Fruit":7,"Sugar":1},"inputs":{}}
+    ],
+    "Harvesting Process":[
+      {"name":"Ox-Powered Ploughs","outputs":{},"inputs":{}},
+      {"name":"Harvesting Tools","outputs":{},"inputs":{"Tools":2}},
+      {"name":"Steam-Powered Thresher Machines","outputs":{},"inputs":{"Tools":2,"Coal":1}},
+      {"name":"Tractors","outputs":{},"inputs":{"Coal":2,"Engines":1}},
+      {"name":"Compression Ignition Tractors","outputs":{},"inputs":{"Oil":2,"Engines":1}}
+    ]
+  },
+    "Millet Farms":{
+    "Base":[
+      {"name":"Simple Farming","outputs":{"Grain":20},"inputs":{}},
+      {"name":"Soil-Enriching Farming","outputs":{"Grain":30},"inputs":{"Fertilizer":5}},
+      {"name":"Fertilizers","outputs":{"Grain":45},"inputs":{"Fertilizer":10}},
+      {"name":"Chemical Fertilizers","outputs":{"Grain":60},"inputs":{"Fertilizer":15}}
+    ],
+    "Secondary" :[
+      {"name":"Maintain Single Crop","outputs":{},"inputs":{}},
+      {"name":"Fig Orchards","outputs":{"Grain":-8,"Fruit":7,"Sugar":1},"inputs":{}}
+    ],
+    "Harvesting Process":[
+      {"name":"Ox-Powered Ploughs","outputs":{},"inputs":{}},
+      {"name":"Harvesting Tools","outputs":{},"inputs":{"Tools":2}},
+      {"name":"Steam-Powered Thresher Machines","outputs":{},"inputs":{"Tools":2,"Coal":1}},
+      {"name":"Tractors","outputs":{},"inputs":{"Coal":2,"Engines":1}},
+      {"name":"Compression Ignition Tractors","outputs":{},"inputs":{"Oil":2,"Engines":1}}
+    ]
+  },
+  "Livestock Ranches":{
+    "Base":[
+      {"Open Air Stockyards"}
+    ],
+    "Wool Production":[],
+    "Fencing":[],
+    "Refrigeration":[]
+  }
+
+}
