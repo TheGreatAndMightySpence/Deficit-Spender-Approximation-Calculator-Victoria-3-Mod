@@ -306,11 +306,416 @@
   },
   "Livestock Ranches":{
     "Base":[
-      {"Open Air Stockyards"}
+      {"name":"Open Air Stockyards","outputs":{"Meat":10},"inputs":{}},
+      {"name":"Open Air Stockyards","outputs":{"Meat":15},"inputs":{"Tools":2}},
+      {"name":"Open Air Stockyards","outputs":{"Meat":25},"inputs":{"Tools":5}},
+      {"name":"Open Air Stockyards","outputs":{"Meat":35},"inputs":{"Tools":5,"Coal":5}}
     ],
-    "Wool Production":[],
-    "Fencing":[],
-    "Refrigeration":[]
+    "Wool Production":[
+      {"name":"Sheep Ranch","outputs":{"Fabric":5},"inputs":{}},
+      {"name":"Sheep Ranch","outputs":{"Fabric":15,"Fertilizer":2.5},"inputs":{"Grain":10}},
+      {"name":"Sheep Ranch","outputs":{"Fabric":25,"Fertilizer":5},"inputs":{"Grain":15}}
+    ],
+    "Fencing":[
+      {"name":"Standard Fences","outputs":{},"inputs":{}},
+      {"name":"Barbed Wire Fences","outputs":{},"inputs":{"Iron":1}},
+      {"name":"Electric Fences","outputs":{},"inputs":{"Iron":1}}
+    ],
+    "Refrigeration":[
+      {"name":"Unrefrigerated","outputs":{},"inputs":{}},
+      {"name":"Refrigerated Storage","outputs":{},"inputs":{"Electricity":1}},
+      {"name":"Refrigerated Rail Cars","outputs":{},"inputs":{"Electricity":1,"Transportation":1}}
+    ]
+  },
+
+  "Vineyard" : {
+    "Base" : [
+      {"name":"Basic Production","outputs":{"Wine":20},"inputs":{}},
+      {"name":"Basic Production","outputs":{"Wine":40},"inputs":{"Engines":5}}
+    ],
+    "Train Automation" : [
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Basic Production","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+
+  "Coal Mines":{
+    "Mining Equipment":[
+      {"name":"Picks and Shovels","outputs":{"Coal":25},"inputs":{"Tools":5}},
+      {"name":"Atmospheric Engine Pump","outputs":{"Coal":40},"inputs":{"Tools":10}},
+      {"name":"Condensing Engine Pump","outputs":{"Coal":60},"inputs":{"Tools":15}},
+      {"name":"Diesel Pump","outputs":{"Coal":90},"inputs":{"Tools":15,"Oil":5}}
+    ],
+    "Explosives":[
+      {"name":"Manual Drilling","outputs":{},"inputs":{}},
+      {"name":"Nitroglycerin","outputs":{"Coal":15},"inputs":{"Explosives":5}},
+      {"name":"Dynamite","outputs":{"Coal":25},"inputs":{"Explosives":10}}
+    ],
+    "Steam Automation":[
+      {"name":"Hand Cranked Crane","outputs":{},"inputs":{}},
+      {"name":"Steam Donkey","outputs":{},"inputs":{"Engines":1,"Coal":3}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+
+    "Iron Mines":{
+    "Mining Equipment":[
+      {"name":"Picks and Shovels","outputs":{"Iron":20},"inputs":{"Tools":5}},
+      {"name":"Atmospheric Engine Pump","outputs":{"Iron":40},"inputs":{"Tools":10,"Coal":10}},
+      {"name":"Condensing Engine Pump","outputs":{"Iron":60},"inputs":{"Tools":15,"Coal":15}},
+      {"name":"Diesel Pump","outputs":{"Iron":70},"inputs":{"Tools":15,"Oil":5}}
+    ],
+    "Explosives":[
+      {"name":"Manual Drilling","outputs":{},"inputs":{}},
+      {"name":"Nitroglycerin","outputs":{"Iron":12},"inputs":{"Explosives":5}},
+      {"name":"Dynamite","outputs":{"Iron":20},"inputs":{"Explosives":10}}
+    ],
+    "Steam Automation":[
+      {"name":"Hand Cranked Crane","outputs":{},"inputs":{}},
+      {"name":"Steam Donkey","outputs":{},"inputs":{"Engines":1,"Coal":4}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+      "Lead Mines":{
+    "Mining Equipment":[
+      {"name":"Picks and Shovels","outputs":{"Lead":20},"inputs":{"Tools":5}},
+      {"name":"Atmospheric Engine Pump","outputs":{"Lead":40},"inputs":{"Tools":10,"Coal":10}},
+      {"name":"Condensing Engine Pump","outputs":{"Lead":60},"inputs":{"Tools":15,"Coal":15}},
+      {"name":"Diesel Pump","outputs":{"Lead":70},"inputs":{"Tools":15,"Oil":5}}
+    ],
+    "Explosives":[
+      {"name":"Manual Drilling","outputs":{},"inputs":{}},
+      {"name":"Nitroglycerin","outputs":{"Lead":12},"inputs":{"Explosives":5}},
+      {"name":"Dynamite","outputs":{"Lead":20},"inputs":{"Explosives":10}}
+    ],
+    "Steam Automation":[
+      {"name":"Hand Cranked Crane","outputs":{},"inputs":{}},
+      {"name":"Steam Donkey","outputs":{},"inputs":{"Engines":1,"Coal":4}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Sulfur Mines":{
+    "Mining Equipment":[
+      {"name":"Picks and Shovels","outputs":{"Sulfur":20},"inputs":{"Tools":5}},
+      {"name":"Atmospheric Engine Pump","outputs":{"Sulfur":40},"inputs":{"Tools":10,"Coal":10}},
+      {"name":"Condensing Engine Pump","outputs":{"Sulfur":60},"inputs":{"Tools":15,"Coal":15}},
+      {"name":"Diesel Pump","outputs":{"Sulfur":80},"inputs":{"Tools":15,"Oil":5}}
+    ],
+    "Explosives":[
+      {"name":"Manual Drilling","outputs":{},"inputs":{}},
+      {"name":"Nitroglycerin","outputs":{"Sulfur":10},"inputs":{"Explosives":5}},
+      {"name":"Dynamite","outputs":{"Sulfur":20},"inputs":{"Explosives":10}}
+    ],
+    "Steam Automation":[
+      {"name":"Hand Cranked Crane","outputs":{},"inputs":{}},
+      {"name":"Steam Donkey","outputs":{},"inputs":{"Engines":1,"Coal":4}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Gold Mines":{
+    "Mining Equipment":[
+      {"name":"Picks and Shovels","outputs":{"Gold":8},"inputs":{"Tools":5}},
+      {"name":"Atmospheric Engine Pump","outputs":{"Gold":15},"inputs":{"Tools":10,"Coal":10}},
+      {"name":"Condensing Engine Pump","outputs":{"Gold":25},"inputs":{"Tools":15,"Coal":15}},
+      {"name":"Diesel Pump","outputs":{"Gold":30},"inputs":{"Tools":15,"Oil":5}}
+    ],
+    "Explosives":[
+      {"name":"Manual Drilling","outputs":{},"inputs":{}},
+      {"name":"Nitroglycerin","outputs":{"Gold":5},"inputs":{"Explosives":5}},
+      {"name":"Dynamite","outputs":{"Gold":10},"inputs":{"Explosives":10}}
+    ],
+    "Steam Automation":[
+      {"name":"Hand Cranked Crane","outputs":{},"inputs":{}},
+      {"name":"Steam Donkey","outputs":{},"inputs":{"Engines":1,"Coal":4}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+  "Gold Fields":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Gold":10},"inputs":{}}
+    ]
+  },
+
+  "Coffee Plantations":{
+    "Base":[
+      {"name":"Dry Process","outputs":{"Coffee":20},"inputs":{}},
+      {"name":"Wet Process - Manual Pulping","outputs":{"Coffee":25},"inputs":{"Tools":5}},
+      {"name":"Wet Process - Mechanical Pulping","outputs":{"Coffee":20},"inputs":{"Tools":5,"Engines":3}}
+    ],
+    "Drying Method":[
+      {"name":"Patio Drying","outputs":{"Coffee":5},"inputs":{}},
+      {"name":"Mechanical Dryers","outputs":{"Coffee":15},"inputs":{"Tools":3,"Engines":2}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Violent Treatment","outputs":{"Coffee":10},"inputs":{}},
+      {"name":"Exploitative Practices","outputs":{"Coffee":5},"inputs":{}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Cotton Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Fabric":45},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Fabric":80},"inputs":{"Engines":5}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Violent Treatment","outputs":{"Fabric":20},"inputs":{}},
+      {"name":"Exploitative Practices","outputs":{"Fabric":10},"inputs":{}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Dye Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Dye":30},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Dye":45},"inputs":{"Engines":5}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Violent Treatment","outputs":{"Dye":15},"inputs":{}},
+      {"name":"Exploitative Practices","outputs":{"Dye":10},"inputs":{}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Opium Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Opium":20},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Opium":40},"inputs":{"Engines":5}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Tea Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Tea":20},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Tea":35},"inputs":{"Engines":5}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Violent Treatment","outputs":{"Tea":20},"inputs":{}},
+      {"name":"Exploitative Practices","outputs":{"Tea":15},"inputs":{}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Tobacco Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Tobacco":30},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Tobacco":45},"inputs":{"Engines":5}}
+    ],
+      "Manufacturing":[
+      {"name":"Hand-Rolled","outputs":{},"inputs":{}},
+      {"name":"Molds","outputs":{"Tobacco":5},"inputs":{"Iron":1}},
+      {"name":"Electric Rollers","outputs":{"Tobacco":20},"inputs":{"Iron":2,"Electricity":2}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Exploited Rollers","outputs":{"Tobacco":5},"inputs":{}},
+      {"name":"Lectors","outputs":{"Tobacco":2},"inputs":{}},
+      {"name":"Factory Radios","outputs":{"Tobacco":5},"inputs":{"Radios":1}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Sugar Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Sugar":25},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Sugar":50},"inputs":{"Engines":5}}
+    ],
+      "Refinement":[
+      {"name":"Ox-Driven Rollers","outputs":{},"inputs":{}},
+      {"name":"Vacuum Pans","outputs":{"Sugar":5},"inputs":{"Coal":1}},
+      {"name":"Steam-Powered Mills","outputs":{"Sugar":15},"inputs":{"Engines":2,"Coal":2}},
+      {"name":"Centrifugal Machines","outputs":{"Sugar":30},"inputs":{"Engines":1,"Coal":4}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Violent Treatment","outputs":{"Sugar":40},"inputs":{}},
+      {"name":"Exploitative Practices","outputs":{"Sugar":20},"inputs":{}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+    "Banana Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Fruit":40},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Fruit":50},"inputs":{"Engines":5}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Violent Treatment","outputs":{"Fruit":25},"inputs":{}},
+      {"name":"Exploitative Practices","outputs":{"Fruit":20},"inputs":{}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+  
+  "Silk Plantations" : {
+    "Base":[
+      {"name":"Basic Production","outputs":{"Silk":15},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Silk":40},"inputs":{"Engines":5}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+  "Urban Center":{
+    "Amenities":[
+      {"name":"Market Stalls","outputs":{"Services":15},"inputs":{}},
+      {"name":"Market Squares","outputs":{"Services":20},"inputs":{"Wood":1,"Glass":1}},
+      {"name":"Covered Markets","outputs":{"Services":25},"inputs":{"Glass":2,"Steel":1}},
+      {"name":"Arcades","outputs":{"Services":30},"inputs":{"Glass":2,"Steel":2,"Electricity":1}}
+    ],
+    "Street Lighting":[
+      {"name":"Unlit Streets","outputs":{},"inputs":{}},
+      {"name":"Gas Streelights","outputs":{"Services":5,"Infrastructure":1},"inputs":{"Coal":2}},
+      {"name":"Electric Streetlights","outputs":{"Services":10,"Infrastructure":2},"inputs":{"Electricity":3}}
+    ],
+    "Public Transport":[
+      {"name":"Personal Transportation Only","outputs":{"Transportation":2},"inputs":{}},
+      {"name":"Public Trams","outputs":{"Transportation":4},"inputs":{"Engines":0.5}},
+      {"name":"Public Motor Carriages","outputs":{"Transportation":8},"inputs":{"Automobiles":1}}
+    ]
+  },
+  "Arts Academy" : {
+    "Base":[
+      {"name":"Traditional Art","outputs":{"Fine art":4},"inputs":{"Paper":10}},
+      {"name":"Realist Art","outputs":{"Fine art":5},"inputs":{"Paper":15}},
+      {"name":"Photographic Art","outputs":{"Fine art":7},"inputs":{"Paper":15,"Tools":15}},
+      {"name":"Film Art","outputs":{"Fine art":8},"inputs":{"Paper":15,"Tools":10,"Electricity":2}}
+    ]
+  },
+  "Government Administration": {
+    "Base":[
+      {"name":"Simple Organization","outputs":{"Bureaucracy":10,"Taxation Capacity":2},"inputs":{}},
+      {"name":"Filing Cabinets","outputs":{"Bureaucracy":50,"Taxation Capacity":10},"inputs":{"Paper":10}},
+      {"name":"Standardized Filing System","outputs":{"Bureaucracy":65,"Taxation Capacity":15},"inputs":{"Paper":20}},
+      {"name":"Telephone Switchboards","outputs":{"Bureaucracy":100,"Taxation Capacity":30},"inputs":{"Paper":20,"Telephones":5}}
+  ]
+  },
+  "University":{
+    "Base":[
+      {"name":"Scholastic Education","outputs":{"Innovation":1},"inputs":{"Paper":5}},
+      {"name":"Philosophy Department","outputs":{"Innovation":1.5},"inputs":{"Paper":10}},
+      {"name":"Analytical Philosophy Department","outputs":{"Innovation":2},"inputs":{"Paper":15}}
+    ]
+  },
+  "Power Plants" : {
+    "Base" : [
+      {"name":"Early Power Plant","outputs":{"Electricity":25},"inputs":{"Engines":4,"Coal":5,"Wood":5}},
+      {"name":"Coal-Fired Plant","outputs":{"Electricity":50},"inputs":{"Engines":6,"Coal":20}},
+      {"name":"Oil-Fired Plant","outputs":{"Electricity":80},"inputs":{"Engines":10,"Oil":25}}
+    ]
+  },
+  "Logging Camps": {
+    "Base":[
+      {"name":"Simple Forestry","outputs":{"Wood":30},"inputs":{}},
+      {"name":"Saw Mills","outputs":{"Wood":60},"inputs":{"Tools":5}},
+      {"name":"Electric Saw Mills","outputs":{"Wood":100},"inputs":{"Tools":10,"Electricity":5}}
+    ],
+    "Hardwood Production":[
+      {"name":"Prioritize Softwood Production","outputs":{},"inputs":{}},
+      {"name":"Hardwood Production","outputs":{"Hardwood":10,"Wood":-25},"inputs":{}},
+      {"name":"Focused Hardwood Production","outputs":{"Hardwood":20,"Wood":-40},"inputs":{}}
+    ],
+    "Special Equipment":[
+      {"name":"Horse Drawn","outputs":{},"inputs":{}},
+      {"name":"Steam Donkey","outputs":{},"inputs":{"Engines":1,"Coal":4}},
+      {"name":"Chainsaws","outputs":{},"inputs":{"Engines":1,"Oil":4}}
+    ],
+    "Transportation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}},
+      {"name":"Rail Log Carts","outputs":{},"inputs":{"Transportation":8}}
+    ]
+  },
+
+  "Rubber Plantations":{
+    "Base":[
+      {"name":"Basic Production","outputs":{"Rubber":20},"inputs":{}},
+      {"name":"Automatic Irrigation","outputs":{"Rubber":40},"inputs":{"Engines":5}}
+    ],
+    "Working Conditions":[
+      {"name":"Standard Labor","outputs":{},"inputs":{}},
+      {"name":"Violent Treatment","outputs":{"Rubber":25},"inputs":{}},
+      {"name":"Exploitative Practices","outputs":{"Rubber":10},"inputs":{}}
+    ],
+    "Train Automation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}}
+    ]
+  },
+  "Fishing Wharves" : {
+    "Base":[
+      {"name":"Simple Fishing","outputs":{"Fish":25},"inputs":{}},
+      {"name":"Fishing Trawlers","outputs":{"Fish":50},"inputs":{"Clippers":5}},
+      {"name":"Steam Trawlers","outputs":{"Fish":100},"inputs":{"Steamers":5,"Coal":15}}
+    ],
+    "Refrigeration":[
+      {"name":"Unrefrigerated","outputs":{},"inputs":{}},
+      {"name":"Refrigerated Storage","outputs":{},"inputs":{"Electricity":5}},
+      {"name":"Refrigerated Rail Cars","outputs":{},"inputs":{"Electricity":5,"Transportation":5}},
+      {"name":"Flash Freezing","outputs":{},"inputs":{"Electricity":7,"Transportation":7}}
+    ]
+  },
+    "Whaling Stations" : {
+    "Base":[
+      {"name":"Simple Whaling","outputs":{"Meat":5,"Oil":10},"inputs":{}},
+      {"name":"Whaling Fleet","outputs":{"Meat":10,"Oil":20},"inputs":{"Clippers":5}},
+      {"name":"Steam-Powered Whalers","outputs":{"Meat":20,"Oil":40},"inputs":{"Steamers":5,"Coal":20}}
+    ],
+    "Refrigeration":[
+      {"name":"Unrefrigerated","outputs":{},"inputs":{}},
+      {"name":"Refrigerated Storage","outputs":{},"inputs":{"Electricity":5}},
+      {"name":"Refrigerated Rail Cars","outputs":{},"inputs":{"Electricity":5,"Transportation":5}},
+      {"name":"Flash Freezing","outputs":{},"inputs":{"Electricity":7,"Transportation":7}}
+    ]
+  },
+  "Oil Rigs":{
+    "Base":[
+      {"name":"Steam-Powered Derricks","outputs":{"Oil":60},"inputs":{"Engines":5,"Coal":10}},
+      {"name":"Combustion Engine Derricks","outputs":{"Oil":100},"inputs":{"Engines":10}}
+    ],
+    "Transportation":[
+      {"name":"Road Carts","outputs":{},"inputs":{}},
+      {"name":"Rail Transportation","outputs":{},"inputs":{"Transportation":5}},
+      {"name":"Tanker Cars","outputs":{},"inputs":{"Transportation":10}}
+    ]
   }
 
 }
